@@ -1,0 +1,23 @@
+{
+  "config": {
+    "arena": {
+      "left": 903,
+      "top": 166,
+      "width": 555,
+      "height": 728
+    },
+    "paddle_y": 607,
+    "paddle_band": 194,
+    "deadzone": 19.08,
+    "threshold_ball": 0.6,
+    "threshold_paddle": 0.7
+  },
+  "ball_score": -1.0,
+  "paddle_score": 0.9492573142051697,
+  "valid": false,
+  "auto_launch_enabled": true,
+  "launch_reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+  "prompt_score": 0.8234911561012268,
+  "prompt_visible": false,
+  "last_launch": null
+}

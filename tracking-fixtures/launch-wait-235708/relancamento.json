@@ -1,0 +1,2402 @@
+[
+  {
+    "time": 1897.4527628,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1897.5048157,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1897.5550122,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1897.601192,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1897.642562,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1897.6941676,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1897.7467067,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1897.7958188,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1897.8436202,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1897.8906307,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1897.9345263,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1897.9836388,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.0310414,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.0742253,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.1259878,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.1745588,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.2192805,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.2603871,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.2985379,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.3422982,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.3821503,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.4340733,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.4762294,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.5218726,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.5650723,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.6129628,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.6535214,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.7093904,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.7564537,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.798145,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.8421962,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.885141,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.9235933,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1898.9657104,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.0078401,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.048834,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.1000265,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.1555953,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.2003866,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.2528067,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.3163887,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.3758889,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.4493682,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.5036743,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.5590984,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.6173506,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.6790869,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.7299893,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.7850062,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.8255135,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.8669983,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.9192552,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1899.9707063,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.0247436,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.0679591,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.1125049,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.1516464,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.2125733,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.2785165,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.3382979,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.3897759,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.4465162,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.5032255,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.558166,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.6124115,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.6570393,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.70151,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.7445088,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.7924543,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.8352708,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.8770297,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.9222028,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1900.9644723,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.009643,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.0559587,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.1016698,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.1538246,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.200539,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.245284,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.2965367,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.3519381,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.3999114,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.4397991,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.4831399,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.5449742,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.6095294,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.6510208,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.6976122,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.7572899,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.7977173,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.8411605,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.9057649,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.953751,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1901.9981685,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.0480191,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.0954665,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.1451125,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.2087333,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.2681931,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.3295123,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.3877128,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.4482974,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.4943406,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.5443875,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.5906131,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.6391089,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.6867431,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.7386093,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.7844724,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.8311108,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.879108,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.9342803,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1902.9771,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1903.0248754,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1903.072924,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1903.1191227,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1903.1638054,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1903.2144159,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1903.2583168,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  },
+  {
+    "time": 1903.3097041,
+    "valid": false,
+    "ball": [
+      0.0,
+      0.0,
+      0,
+      0
+    ],
+    "paddle": [
+      400.0,
+      607.0,
+      106,
+      97
+    ],
+    "reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+    "request": false,
+    "prompt_score": 0.8234911561012268,
+    "prompt_visible": false
+  }
+]
