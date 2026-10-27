@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-labelledby="title desc">
+<title id="title">Dota Minigame Auto</title><desc id="desc">Apresentação com fundo carvão, letras marfim, detalhes cobre e uma ilustração geométrica de quebra-blocos.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#151b24"/><stop offset="1" stop-color="#090d13"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity=".025"/></pattern></defs>
+<rect width="1280" height="400" rx="22" fill="url(#bg)"/><rect width="1280" height="400" rx="22" fill="url(#grid)"/>
+<rect x="54" y="54" width="5" height="292" rx="2" fill="#c88c59"/>
+<text x="83" y="91" fill="#c88c59" font-family="Segoe UI,Arial,sans-serif" font-size="16" letter-spacing="4">VISÃO COMPUTACIONAL · WINDOWS</text>
+<text x="80" y="175" fill="#eee7da" font-family="Segoe UI,Arial,sans-serif" font-size="62" font-weight="700">DOTA MINIGAME</text>
+<text x="80" y="245" fill="#c88c59" font-family="Segoe UI,Arial,sans-serif" font-size="62" font-weight="700">AUTO</text>
+<text x="83" y="296" fill="#a6afbc" font-family="Segoe UI,Arial,sans-serif" font-size="21">A bota na tela. A raquete no lugar.</text>
+<text x="83" y="337" fill="#738192" font-family="Segoe UI,Arial,sans-serif" font-size="16">OpenCV · interface gráfica · executável único</text>
+<g transform="translate(900 65)"><rect width="294" height="270" rx="14" fill="#121a25" stroke="#374252"/>
+<g fill="#c88c59"><rect x="24" y="24" width="54" height="20" rx="3"/><rect x="86" y="24" width="54" height="20" rx="3"/><rect x="148" y="24" width="54" height="20" rx="3"/><rect x="210" y="24" width="60" height="20" rx="3"/></g>
+<g fill="#81674e"><rect x="24" y="52" width="54" height="20" rx="3"/><rect x="86" y="52" width="54" height="20" rx="3"/><rect x="210" y="52" width="60" height="20" rx="3"/></g>
+<path d="M52 222L152 111L244 197" fill="none" stroke="#789d9a" stroke-width="2" stroke-dasharray="6 7" opacity=".8"/>
+<circle cx="152" cy="111" r="9" fill="#eee7da"/><circle cx="152" cy="111" r="18" fill="none" stroke="#789d9a" opacity=".5"/>
+<rect x="22" y="222" width="92" height="13" rx="6" fill="#c88c59"/>
+<rect x="17" y="217" width="102" height="23" rx="8" fill="none" stroke="#789d9a" stroke-width="2"/>
+<text x="155" y="248" fill="#a6afbc" font-family="Segoe UI,Arial,sans-serif" font-size="13">PIXELS → MOVIMENTO</text></g>
+</svg>
