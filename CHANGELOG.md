@@ -1,5 +1,15 @@
 # Histórico de versões
 
+## v1.0.3 — interface Português / English
+
+- Botão com bandeiras no canto superior direito alterna os textos da interface, calibração, avisos e mensagens de diagnóstico imediatamente.
+- Guarda a escolha em `settings.json`, sem alterar a calibração. A troca mantém a seleção atual e o controlador em execução.
+- Bandeiras locais funcionam sem depender de emojis do Windows. Textos se ajustam à largura da janela nos dois idiomas.
+- Preserva os detectores, atalhos e tempos da v1.0.2. O reconhecimento de relançamento continua usando a instrução visual do jogo em português.
+- Instruções de uso também disponíveis em inglês em `README.en.md`.
+
+Validação: 43 testes locais aprovados. Interface e executável conferidos em área gráfica isolada, com perfil vazio, nos dois idiomas e tamanhos de janela 1020×810 e 820×700. A seleção e o controlador simulado permanecem intactos ao alternar o idioma; não foi iniciada uma nova partida real para esta mudança de textos.
+
 ## v1.0.2 — estabilidade da raquete e do diagnóstico
 
 - Os F10 novos confirmaram que o relançamento havia concluído. A falha posterior estava no acompanhamento: o recorte animado da raquete caiu abaixo do limite apesar de continuar visível.

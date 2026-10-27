@@ -9,6 +9,7 @@ from unittest.mock import patch
 import cv2
 import numpy as np
 from diagnostics import DiagnosticWriter
+from i18n import Message
 import gui
 
 
@@ -57,7 +58,7 @@ class DiagnosticTests(unittest.TestCase):
         self.assertEqual(events,[(0x44,0),(0x44,2)])  # One continuous D hold, then final release.
         self.assertEqual(resets,[])
         self.assertEqual(len(saved),1)
-        self.assertFalse(any(str(item[0]).startswith('Erro:') for item in messages),messages)
+        self.assertFalse(any(isinstance(item[0],Message) and item[0].key=='Erro: {error}' for item in messages),messages)
 
     def test_only_actual_game_title_passes_focus_guard(self):
         self.assertTrue(gui.is_dota_title('Dota 2'))

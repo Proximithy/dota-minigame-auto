@@ -6,7 +6,6 @@ import os
 from pathlib import Path
 import queue
 import sys
-import sys
 import threading
 import time
 from collections import deque
@@ -22,6 +21,7 @@ from auto_launch import double_space
 from launch_prompt import LaunchPrompt
 from calibration import load_calibration
 from diagnostics import DiagnosticWriter
+from i18n import LocalizedVar, flag_image, load_language, message, save_language, translate
 
 USER = ctypes.WinDLL('user32', use_last_error=True)
 USER.SetProcessDPIAware()
@@ -31,7 +31,7 @@ USER.GetAsyncKeyState.argtypes = [ctypes.c_int]
 USER.GetAsyncKeyState.restype = ctypes.c_short
 USER.keybd_event.argtypes = [wintypes.BYTE, wintypes.BYTE, wintypes.DWORD, ctypes.c_size_t]
 DATA = Path(os.environ.get('LOCALAPPDATA', str(Path.home()))) / 'DotaMinigameAssistente'
-APP_VERSION = '1.0.2'
+APP_VERSION = '1.0.3'
 
 
 def is_dota_title(title):
@@ -103,7 +103,8 @@ class App:
         self.closing = False
         self.testing = '--self-test' in sys.argv
         self.auto_launch_enabled = True
-        root.title(f'Assistente do Minigame • Dota 2 • v{APP_VERSION}')
+        self.language = load_language(DATA)
+        self.localized_vars = []
         root.geometry('1020x810')
         root.minsize(820, 700)
         root.configure(bg='#171b24')
@@ -112,42 +113,81 @@ class App:
         style.configure('TFrame', background='#171b24')
         style.configure('TLabel', background='#171b24', foreground='#e8edf5', font=('Segoe UI', 11))
         style.configure('TButton', font=('Segoe UI', 10), padding=9)
+        style.configure('TCheckbutton', background='#171b24', foreground='#e8edf5', font=('Segoe UI', 10))
+        style.map('TCheckbutton', background=[('active', '#171b24')])
         style.configure('Title.TLabel', font=('Segoe UI', 21, 'bold'))
         body = ttk.Frame(root, padding=20)
         body.pack(fill='both', expand=True)
-        ttk.Label(body, text='Assistente do Minigame', style='Title.TLabel').pack(anchor='w')
-        ttk.Label(body, text='Calibre na imagem, confira a detecção e depois ative A/D.').pack(anchor='w', pady=(4, 14))
+        header = ttk.Frame(body)
+        header.pack(fill='x')
+        ttk.Label(header, textvariable=self.text('Assistente do Minigame'), style='Title.TLabel').pack(side='left')
+        self.flags = {language: ImageTk.PhotoImage(flag_image(language), master=root) for language in ('pt-BR', 'en')}
+        self.language_button = ttk.Button(header, command=self.toggle_language, compound='left')
+        self.language_button.pack(side='right')
+        ttk.Label(body, textvariable=self.text('Calibre na imagem, confira a detecção e depois ative A/D.')).pack(anchor='w', pady=(4, 14))
         bar = ttk.Frame(body)
         bar.pack(fill='x')
-        self.calibrate_button = ttk.Button(bar, text='1. Calibrar', command=self.capture_start)
+        self.calibrate_button = ttk.Button(bar, textvariable=self.text('1. Calibrar'), command=self.capture_start)
         self.calibrate_button.pack(side='left', padx=(0, 8))
-        self.observe_button = ttk.Button(bar, text='2. Testar (F6)', command=lambda: self.start(True))
+        self.observe_button = ttk.Button(bar, textvariable=self.text('2. Testar (F6)'), command=lambda: self.start(True))
         self.observe_button.pack(side='left', padx=(0, 8))
-        self.play_button = ttk.Button(bar, text='3. Jogar (F7)', command=lambda: self.start(False))
+        self.play_button = ttk.Button(bar, textvariable=self.text('3. Jogar (F7)'), command=lambda: self.start(False))
         self.play_button.pack(side='left', padx=(0, 8))
-        ttk.Button(bar, text='Parar (F9)', command=self.halt).pack(side='left')
-        self.status = tk.StringVar(value='Comece em “Calibrar”. O aplicativo inicia parado.')
+        ttk.Button(bar, textvariable=self.text('Parar (F9)'), command=self.halt).pack(side='left')
+        self.status = self.text('Comece em “Calibrar”. O aplicativo inicia parado.')
         ttk.Label(body, textvariable=self.status, wraplength=950).pack(anchor='w', pady=(14, 6))
-        self.instruction = tk.StringVar(value='Após calibrar, volte ao Dota e aperte F7 para jogar, sem sair do minigame.')
+        self.instruction = self.text('Após calibrar, volte ao Dota e aperte F7 para jogar, sem sair do minigame.')
         ttk.Label(body, textvariable=self.instruction, wraplength=950).pack(anchor='w', pady=(0, 8))
-        self.canvas = tk.Canvas(body, width=950, height=350, bg='#0c1017', highlightthickness=1, highlightbackground='#394454')
+        self.canvas = tk.Canvas(body, width=950, height=200, bg='#0c1017', highlightthickness=1, highlightbackground='#394454')
         self.canvas.pack(fill='both', expand=True)
         self.canvas.bind('<ButtonPress-1>', self.drag_start)
         self.canvas.bind('<B1-Motion>', self.drag_move)
         self.canvas.bind('<ButtonRelease-1>', self.drag_end)
         footer = ttk.Frame(body)
         footer.pack(fill='x', pady=(10, 0))
-        self.confirm_button = ttk.Button(footer, text='Confirmar seleção', command=self.confirm, state='disabled')
+        self.confirm_button = ttk.Button(footer, textvariable=self.text('Confirmar seleção'), command=self.confirm, state='disabled')
         self.confirm_button.pack(side='left')
-        ttk.Button(footer, text='Cancelar calibração', command=self.cancel_calibration).pack(side='left', padx=8)
+        ttk.Button(footer, textvariable=self.text('Cancelar calibração'), command=self.cancel_calibration).pack(side='left', padx=8)
         self.auto_launch_var = tk.BooleanVar(value=True)
-        ttk.Checkbutton(footer, text='Relançar após troca de nível (Espaço 2×)', variable=self.auto_launch_var,
-                        command=lambda: setattr(self, 'auto_launch_enabled', self.auto_launch_var.get())).pack(side='left', padx=8)
-        ttk.Label(body, text='No Dota: F6 testa • F7 joga • F8 pausa/retoma • F9 para • F10 salva diagnóstico\n'
-                  'Instrução “Travar posição do carrinho” detectada: Espaço 2×, uma vez por espera.', wraplength=950).pack(anchor='w', pady=(10, 0))
+        ttk.Checkbutton(body, textvariable=self.text('Relançar após troca de nível (Espaço 2×)'), variable=self.auto_launch_var,
+                        command=lambda: setattr(self, 'auto_launch_enabled', self.auto_launch_var.get())).pack(anchor='w', pady=(6, 0))
+        ttk.Label(body, textvariable=self.text('No Dota: F6 testa • F7 joga • F8 pausa/retoma • F9 para • F10 salva diagnóstico\n'
+                  'Instrução “Travar posição do carrinho” detectada: Espaço 2×, uma vez por espera.'), wraplength=950).pack(anchor='w', pady=(10, 0))
+        body.bind('<Configure>', lambda event: self.wrap_labels(body, event.width-40))
+        self.apply_language()
         self.load()
         root.protocol('WM_DELETE_WINDOW', self.close)
         root.after(80, self.poll)
+
+    def text(self, value):
+        variable = LocalizedVar(self.root, lambda: self.language, value)
+        self.localized_vars.append(variable)
+        return variable
+
+    def tr(self, value):
+        return translate(self.language, value)
+
+    def apply_language(self):
+        self.root.title(f'{self.tr("Assistente do Minigame")} • Dota 2 • v{APP_VERSION}')
+        target = 'en' if self.language == 'pt-BR' else 'pt-BR'
+        self.language_button.configure(text='English' if target == 'en' else 'Português', image=self.flags[target])
+        for variable in self.localized_vars:
+            variable.refresh()
+
+    def toggle_language(self):
+        self.language = 'en' if self.language == 'pt-BR' else 'pt-BR'
+        self.apply_language()
+        try:
+            save_language(DATA, self.language)
+        except OSError as exc:
+            messagebox.showerror(self.tr('Erro: {error}').format(error=''),
+                                 self.tr(message('Não foi possível salvar o idioma: {error}', error=str(exc))))
+
+    @staticmethod
+    def wrap_labels(body, width):
+        for widget in body.winfo_children():
+            if isinstance(widget, ttk.Label):
+                widget.configure(wraplength=max(300, width))
 
     def load(self):
         embedded=Path(getattr(sys,'_MEIPASS',Path(__file__).parent))/'default_calibration'
@@ -199,7 +239,7 @@ class App:
         except Exception as exc:
             self.root.deiconify()
             self.busy(False)
-            messagebox.showerror('Não foi possível capturar', str(exc))
+            messagebox.showerror(self.tr('Não foi possível capturar'), self.tr(str(exc)))
 
     def set_stage(self):
         self.selection = None
@@ -248,7 +288,7 @@ class App:
         x, y, w, h = self.selection
         if self.stage == 0:
             if w < 80 or h < 80:
-                messagebox.showinfo('Arena pequena', 'Marque toda a área onde a bola circula.')
+                messagebox.showinfo(self.tr('Arena pequena'), self.tr('Marque toda a área onde a bola circula.'))
                 return
             self.arena_box = self.selection
             self.arena_frame = self.full_frame[y:y+h, x:x+w].copy()
@@ -291,7 +331,7 @@ class App:
                 self.instruction.set('Na prévia: retângulos marcam bola e raquete; o círculo azul indica o alvo.')
                 self.show(verified)
             except Exception as exc:
-                messagebox.showerror('Revise os recortes', str(exc))
+                messagebox.showerror(self.tr('Revise os recortes'), self.tr(str(exc)))
 
     def cancel_calibration(self):
         if self.countdown:
@@ -308,7 +348,7 @@ class App:
         if self.worker and self.worker.is_alive():
             return
         if not self.config:
-            messagebox.showinfo('Calibre primeiro', 'Clique em “1. Calibrar” para marcar a arena, a bola e a raquete.')
+            messagebox.showinfo(self.tr('Calibre primeiro'), self.tr('Clique em “1. Calibrar” para marcar a arena, a bola e a raquete.'))
             return
         self.stop.clear()
         self.busy(True)
@@ -404,7 +444,8 @@ class App:
                         state={'config': self.config, 'ball_score': ball,
                             'paddle_score': paddle, 'valid': valid, 'auto_launch_enabled':self.auto_launch_enabled,
                             'launch_reason':launcher.reason,'prompt_score':launcher.score,'prompt_visible':launcher.visible,
-                            'app_version':APP_VERSION,'prompt_method':launcher.method,
+                            'app_version':APP_VERSION,'interface_language':getattr(self, 'language', 'pt-BR'),
+                            'prompt_method':launcher.method,
                             'last_launch':last_launch,'paddle_method':tracker.paddle_method,
                             'tracking_reason':tracker.tracking_reason,'command':command,'target':tracker.last_target}
                         self.diagnostic_writer.submit(folder,{'arena':frame,'deteccao':preview,'bola':self.ball,'raquete':self.paddle},
@@ -419,12 +460,13 @@ class App:
                                      'jump-rejected':'Salto de detecção rejeitado — A/D soltos',
                                  }.get(tracker.tracking_reason,'Aguardando detecção — A/D soltos')
                         if launcher.visible:state=launcher.reason
-                        self.post(f'{state} • Bola {ball:.0%} • Raquete {paddle:.0%} • '
-                                  + ('Observação' if observe else 'Controle A/D'), preview)
+                        self.post(message('{state} • Bola {ball:.0%} • Raquete {paddle:.0%} • {mode}',
+                                          state=state, ball=ball, paddle=paddle,
+                                          mode='Observação' if observe else 'Controle A/D'), preview)
                         report = now
                     self.stop.wait(max(0, 1/60-(time.perf_counter()-now)))
         except Exception as exc:
-            self.post(f'Erro: {exc}')
+            self.post(message('Erro: {error}', error=str(exc)))
         finally:
             move(0)
             self.stop.set()
@@ -481,7 +523,7 @@ class App:
 def main():
     global DATA
     fresh_profile=None
-    if '--fresh-profile-test' in sys.argv:
+    if '--fresh-profile-test' in sys.argv or '--self-test' in sys.argv:
         import tempfile
         fresh_profile=tempfile.TemporaryDirectory(prefix='dota-calibration-check-')
         DATA=Path(fresh_profile.name)/'profile'
@@ -529,6 +571,23 @@ def main():
                 app.drag_start(SimpleNamespace(x=100, y=100))
                 app.drag_end(SimpleNamespace(x=20, y=30))
                 assert app.selection[2] > 0 and app.selection[3] > 0
+                # A language switch must not disturb calibration or the running controller.
+                selection, box, config_before, canvas_items = app.selection, app.box_id, app.config, app.canvas.find_all()
+                active_worker = SimpleNamespace(is_alive=lambda: True)
+                app.worker = active_worker
+                app.status.set(message('{state} • Bola {ball:.0%} • Raquete {paddle:.0%} • {mode}',
+                                       state='Detectando', ball=.91, paddle=.82, mode='Controle A/D'))
+                app.language = 'pt-BR'
+                app.toggle_language()
+                assert app.language == 'en' and app.calibrate_button.cget('text') == '1. Calibrate'
+                assert app.status.get() == 'Tracking • Ball 91% • Paddle 82% • A/D controls'
+                assert app.selection == selection and app.box_id == box and app.config is config_before
+                assert app.canvas.find_all() == canvas_items and app.worker is active_worker and not app.stop.is_set()
+                assert load_language(DATA) == 'en'
+                app.toggle_language()
+                assert app.language == 'pt-BR' and app.calibrate_button.cget('text') == '1. Calibrar'
+                assert app.selection == selection and app.worker is active_worker
+                app.worker = None
                 app.cancel_calibration()
                 app.show(preview)
                 # Test start shortcuts without running capture or injecting keys.
@@ -553,13 +612,33 @@ def main():
                 app.start, app.config = original_start, original_config
                 app.status.set('Teste isolado: interface, prévia, seleção e detecção aprovados.')
                 root.update()
-                labels = [widget for widget in app.canvas.master.winfo_children() if isinstance(widget, ttk.Label)]
-                assert all(widget.winfo_y()+widget.winfo_height() <= widget.master.winfo_height() for widget in labels)
+                def check_layout(widget):
+                    for child in widget.winfo_children():
+                        assert child.winfo_x()+child.winfo_width() <= widget.winfo_width(), str(child)
+                        assert child.winfo_y()+child.winfo_height() <= widget.winfo_height(), str(child)
+                        check_layout(child)
+                for language in ('pt-BR', 'en'):
+                    app.language = language
+                    app.apply_language()
+                    for geometry in ('1020x810', '820x700'):
+                        root.geometry(geometry)
+                        root.update()
+                        app.show(preview)
+                        root.update()
+                        check_layout(root)
+                        suffix = '' if geometry == '1020x810' else '-small'
+                        snapshot_window(root, output.with_name(f'{output.stem}-{language}{suffix}{output.suffix}'))
+                app.language = 'pt-BR'
+                app.apply_language()
+                root.geometry('1020x810')
+                root.update()
                 snapshot_window(root, output)
                 output.with_suffix('.json').write_text(json.dumps({'passed': True, 'checks': [
                     'window', 'preview', 'reverse_selection', 'template_tracking', 'lost_target_releases', 'first_frame_neutral',
                     'F7_start_once', 'F6_observe', 'hotkeys_require_dota_focus', 'no_start_during_calibration',
-                    'bundled_launch_prompt', 'prompt_without_boot_detection'],
+                    'bundled_launch_prompt', 'prompt_without_boot_detection', 'live_language_switch_keeps_selection',
+                    'live_language_switch_keeps_worker', 'language_saved', 'translated_runtime_status',
+                    'PT_EN_layout_at_normal_and_minimum_size'],
                     'fresh_profile_embedded_calibration':fresh_profile is not None}))
             except Exception:
                 import traceback

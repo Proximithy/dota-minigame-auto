@@ -10,13 +10,15 @@
 
 # Uma bota, uma raquete e alguns pixels.
 
+[English instructions](README.en.md) • Interface em **Português / English** pelo botão com bandeira no canto superior direito.
+
 Fiz este aplicativo para jogar automaticamente o minigame de quebra-blocos do **Dark Carnival, dentro do Dota 2**. Ele acompanha a bota na tela, calcula onde ela vai chegar e move o carrinho com **A/D**.
 
 Quando aparece **“TRAVAR POSIÇÃO DO CARRINHO”**, reconhece a instrução e aperta **Espaço duas vezes** para liberar o próximo lançamento.
 
 Tudo em uma interface para Windows, com um único executável. Sem instalar Python para jogar.
 
-**v1.0.2:** recuperação da raquete pela faixa vermelha e F10 sem interromper o controle. Veja o [histórico de versões](CHANGELOG.md).
+**v1.0.3:** botão com bandeiras para alternar Português / English, com preferência salva. Mantém as correções de rastreamento e F10 da v1.0.2. Veja o [histórico de versões](CHANGELOG.md).
 
 ## Baixar e usar
 
@@ -28,6 +30,8 @@ Tudo em uma interface para Windows, com um único executável. Sem instalar Pyth
 4. Dentro do Dota, pressione **F7** para começar.
 
 > A calibração embutida facilita o primeiro uso, mas não é universal. Uma nova calibração feita no seu PC passa a ter prioridade.
+
+O botão **🇺🇸 English / 🇧🇷 Português** troca os textos imediatamente e guarda a escolha em `settings.json`, separado da calibração. O idioma da interface não altera o idioma do Dota: o relançamento automático ainda reconhece a instrução visual **em português** usada nos testes.
 
 <p align="center">
   <img src="docs/interface.png" alt="Interface do aplicativo com uma captura do minigame e marcações da bota e da raquete" width="900">
@@ -97,7 +101,7 @@ O resultado fica em `dist/Dota-Minigame-Auto-Calibrado.exe`. A receita inclui a 
 ## Verificações
 
 ```powershell
-.venv\Scripts\python.exe -m unittest -v test_calibration test_launch_prompt test_auto_launch test_tracking test_tracking_recovery test_diagnostics test_physics
+.venv\Scripts\python.exe -m unittest -v test_i18n test_calibration test_launch_prompt test_auto_launch test_tracking test_tracking_recovery test_diagnostics test_physics
 ```
 
 Os testes cobrem previsão de rebotes, seleção de direção, calibração embutida, cenas reais de diagnóstico, perdas de detecção e o relançamento. O executável também foi aberto em um ambiente gráfico isolado, inclusive com um perfil sem calibração salva. O autor confirmou o funcionamento da versão usada como base em jogo.

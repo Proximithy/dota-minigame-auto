@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import threading
 import cv2
+from i18n import message
 
 
 class DiagnosticWriter:
@@ -24,7 +25,7 @@ class DiagnosticWriter:
                     (folder_path/f'{name}.png').write_bytes(encoded.tobytes())
                 (folder_path/'estado.json').write_text(json.dumps(state,indent=2),encoding='utf-8')
                 (folder_path/'relancamento.json').write_text(json.dumps(trace,indent=2),encoding='utf-8')
-                callback(f'Diagnóstico salvo em {folder_path}')
-            except Exception as exc:callback(f'Erro ao salvar diagnóstico: {exc}')
+                callback(message('Diagnóstico salvo em {folder}', folder=str(folder_path)))
+            except Exception as exc:callback(message('Erro ao salvar diagnóstico: {error}', error=str(exc)))
         self.thread=threading.Thread(target=save,daemon=True);self.thread.start()
         return True
