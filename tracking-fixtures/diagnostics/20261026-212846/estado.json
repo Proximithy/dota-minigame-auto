@@ -1,0 +1,18 @@
+{
+  "config": {
+    "arena": {
+      "left": 819,
+      "top": 192,
+      "width": 542,
+      "height": 723
+    },
+    "paddle_y": 598,
+    "paddle_band": 202,
+    "deadzone": 19.439999999999998,
+    "threshold_ball": 0.6,
+    "threshold_paddle": 0.7
+  },
+  "ball_score": 0.5353009104728699,
+  "paddle_score": 0.8922032713890076,
+  "valid": false
+}
