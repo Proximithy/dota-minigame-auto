@@ -1,0 +1,28 @@
+{
+  "config": {
+    "arena": {
+      "left": 1136,
+      "top": 166,
+      "width": 559,
+      "height": 730
+    },
+    "paddle_y": 606,
+    "paddle_band": 194,
+    "deadzone": 21.24,
+    "threshold_ball": 0.6,
+    "threshold_paddle": 0.7
+  },
+  "ball_score": 0.9621502549542371,
+  "paddle_score": 0.7402718663215637,
+  "valid": true,
+  "auto_launch_enabled": true,
+  "launch_reason": "instru\u00e7\u00e3o de lan\u00e7amento n\u00e3o vis\u00edvel",
+  "prompt_score": 0.26837727427482605,
+  "prompt_visible": false,
+  "app_version": "1.0.1",
+  "prompt_method": "binary-glyphs-multiscale-1",
+  "last_launch": {
+    "time": 2608.0414516,
+    "sequence_completed": true
+  }
+}
