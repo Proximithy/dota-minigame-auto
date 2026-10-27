@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+build/
+dist/
+*.spec
+*.exe
+*.log
+.env
+runtime-data/
+diagnosticos/
