@@ -29,6 +29,30 @@ class PromptTests(unittest.TestCase):
             image=cv2.imdecode(cv2.imencode('.jpg',image,[cv2.IMWRITE_JPEG_QUALITY,90])[1],cv2.IMREAD_COLOR)
             self.assertTrue(self.prompt.detect(image), (size,self.prompt.score))
 
+    def test_new_real_calibration_relaunches_with_original_threshold(self):
+        import json
+        path=ROOT/'tracking-fixtures/launch-wait-235708'
+        image=cv2.imread(str(path/'arena.png'))
+        original=json.loads((path/'estado.json').read_text())
+        self.assertFalse(original['prompt_visible'])
+        self.assertLess(original['prompt_score'],.85)
+        self.assertFalse(original['valid'])  # Flying-boot detector is intentionally irrelevant here.
+        self.assertTrue(self.prompt.detect(image))
+        self.assertGreater(self.prompt.score,.90)
+        self.assertEqual(sum(self.prompt.update(i*.05,image,True) for i in range(90)),1)
+
+    def test_new_frame_tolerates_small_crop_shifts(self):
+        import numpy as np
+        frame=cv2.imread(str(ROOT/'tracking-fixtures/launch-wait-235708/arena.png'))
+        for x,y in [(-6,-6),(6,6),(-6,6),(6,-6)]:
+            moved=cv2.warpAffine(frame,np.float32([[1,0,x],[0,1,y]]),(frame.shape[1],frame.shape[0]))
+            self.assertTrue(self.prompt.detect(moved),(x,y,self.prompt.score))
+
+    def test_partial_instruction_is_not_a_launch_request(self):
+        partial=self.frame.copy()
+        partial[410:455,275:435]=(20,10,5)
+        self.assertFalse(self.prompt.detect(partial))
+
     def test_observation_missing_paddle_and_sparse_frames_do_not_trigger(self):
         for i in range(60):
             self.assertFalse(self.prompt.update(i*.05,self.frame,True,False))

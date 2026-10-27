@@ -30,6 +30,7 @@ USER.GetAsyncKeyState.argtypes = [ctypes.c_int]
 USER.GetAsyncKeyState.restype = ctypes.c_short
 USER.keybd_event.argtypes = [wintypes.BYTE, wintypes.BYTE, wintypes.DWORD, ctypes.c_size_t]
 DATA = Path(os.environ.get('LOCALAPPDATA', str(Path.home()))) / 'DotaMinigameAssistente'
+APP_VERSION = '1.0.1'
 
 
 def dota_focused():
@@ -96,7 +97,7 @@ class App:
         self.closing = False
         self.testing = '--self-test' in sys.argv
         self.auto_launch_enabled = True
-        root.title('Assistente do Minigame • Dota 2')
+        root.title(f'Assistente do Minigame • Dota 2 • v{APP_VERSION}')
         root.geometry('1020x810')
         root.minsize(820, 700)
         root.configure(bg='#171b24')
@@ -390,6 +391,7 @@ class App:
                         (folder/'estado.json').write_text(json.dumps({'config': self.config, 'ball_score': ball,
                             'paddle_score': paddle, 'valid': valid, 'auto_launch_enabled':self.auto_launch_enabled,
                             'launch_reason':launcher.reason,'prompt_score':launcher.score,'prompt_visible':launcher.visible,
+                            'app_version':APP_VERSION,'prompt_method':launcher.method,
                             'last_launch':last_launch}, indent=2), encoding='utf-8')
                         (folder/'relancamento.json').write_text(json.dumps(list(launch_trace),indent=2),encoding='utf-8')
                         tracker.reset_motion()

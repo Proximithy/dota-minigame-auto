@@ -16,6 +16,8 @@ Quando aparece **“TRAVAR POSIÇÃO DO CARRINHO”**, reconhece a instrução e
 
 Tudo em uma interface para Windows, com um único executável. Sem instalar Python para jogar.
 
+**v1.0.1:** reconhecimento da instrução de relançamento mais tolerante a pequenas mudanças de calibração. Veja o [histórico de versões](CHANGELOG.md).
+
 ## Baixar e usar
 
 **[⬇ Baixar Dota-Minigame-Auto-Calibrado.exe](https://github.com/Proximithy/dota-minigame-auto/releases/latest/download/Dota-Minigame-Auto-Calibrado.exe)**

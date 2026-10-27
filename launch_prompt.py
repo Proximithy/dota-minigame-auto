@@ -7,6 +7,13 @@ class LaunchPrompt:
     def __init__(self, template_path, dwell=.8):
         self.template=cv2.imread(str(template_path),cv2.IMREAD_GRAYSCALE)
         if self.template is None:raise ValueError('Referência de relançamento ausente no aplicativo.')
+        # Compare the bright glyphs, not the scenery behind the instruction.
+        # Softened binary strokes tolerate subpixel shifts introduced by resizing.
+        self.method='binary-glyphs-multiscale-1'
+        self.templates=[]
+        for percent in range(94,107):
+            template=cv2.resize(self.template,None,fx=percent/100,fy=percent/100,interpolation=cv2.INTER_AREA)
+            self.templates.append(self.features(template))
         self.dwell=dwell
         self.latched=False
         self.visible=False
@@ -18,13 +25,17 @@ class LaunchPrompt:
         self.since=self.last_time=self.absent_since=None
         self.samples=0
 
+    @staticmethod
+    def features(gray):
+        strokes=cv2.threshold(gray,145,255,cv2.THRESH_BINARY)[1]
+        return cv2.GaussianBlur(strokes,(5,5),1.0)
+
     def detect(self,frame):
         normalized=cv2.resize(frame,(551,725))
         gray=cv2.cvtColor(normalized,cv2.COLOR_BGR2GRAY)
-        roi=gray[350:510,75:476]
+        roi=self.features(gray[350:510,75:476])
         best=-1.
-        for scale in (.95,1.,1.05):
-            template=cv2.resize(self.template,None,fx=scale,fy=scale,interpolation=cv2.INTER_AREA)
+        for template in self.templates:
             result=cv2.matchTemplate(roi,template,cv2.TM_CCOEFF_NORMED)
             best=max(best,float(cv2.minMaxLoc(result)[1]))
         self.score=best
