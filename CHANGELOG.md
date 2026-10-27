@@ -1,5 +1,15 @@
 # Histórico de versões
 
+## v1.0.2 — estabilidade da raquete e do diagnóstico
+
+- Os F10 novos confirmaram que o relançamento havia concluído. A falha posterior estava no acompanhamento: o recorte animado da raquete caiu abaixo do limite apesar de continuar visível.
+- Preserva o caminho de comparação existente quando ele é válido; quando falha, tenta recuperar a posição pela faixa vermelha estreita do carrinho, conferindo tamanho e formato. Uma bota ausente continua sem gerar A/D.
+- F10 salva uma cópia imutável em outra thread. Não solta A/D, não zera a velocidade e não reinicia a espera de relançamento durante o salvamento.
+- Reduz a frequência da busca da instrução durante o jogo normal; uma instrução já visível continua sendo acompanhada a cada quadro.
+- O foco exige o título do jogo, evitando confundir a janela do próprio assistente com o Dota. O diagnóstico inclui método da raquete, pontuações, motivo de perda, comando, alvo e tempo de processamento.
+
+Validação: 36 testes, incluindo os três F10 novos, ausência real da bota, remoção da raquete, troca de poses com trajetória controlada e uma simulação completa do F10 preservando A/D. As capturas individuais não equivalem a uma partida contínua nova.
+
 ## v1.0.1 — reconhecimento de relançamento
 
 - Corrige a espera por Espaço após uma pequena mudança de calibração: a instrução visível recebia 0,823 no reconhecimento anterior e era rejeitada pelo limite de 0,85.

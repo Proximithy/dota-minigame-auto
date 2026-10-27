@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 from physics import intercept, direction
+from paddle_band import PaddleBand
 
 
 def largest_component(mask):
@@ -16,6 +17,7 @@ class Tracker:
         self.config = config
         self.h, self.w = ball.shape[:2]
         self.paddle_full_shape = paddle.shape[:2]
+        self.band_detector=PaddleBand(paddle)
         self.paddle_offset = 0
         self.paddle = paddle.copy()
         # Use the stable red roof instead of the animated cart body.
@@ -60,6 +62,10 @@ class Tracker:
             rx, ry, rw, rh = cv2.boundingRect(rotated_mask)
             self.variants.append((cv2.cvtColor(rotated[ry:ry+rh, rx:rx+rw], cv2.COLOR_BGR2GRAY), rotated_mask[ry:ry+rh, rx:rx+rw].copy()))
         self.ball_box = self.paddle_box = None
+        self.paddle_method='template'
+        self.tracking_reason='acquiring'
+        self.last_target=None
+        self.last_command=0
         self.excluded_paddle = None
         self.reset_motion()
         if min(self.paddle.shape[:2]) < 4 or np.std(self.paddle) < 2 or np.std(ball) < 2:
@@ -191,6 +197,14 @@ class Tracker:
         bottom = min(frame.shape[0], expected_y+self.paddle.shape[0]+margin)
         ps, px, py_core = self.match(frame[top:bottom], self.paddle)
         py_core += top
+        self.paddle_method='template'
+        # Keep the working template path unchanged. Recover only rejected carts.
+        if ps < c['threshold_paddle']:
+            recovered=self.band_detector.match(frame,c['paddle_y'])
+            if recovered is not None and recovered[0]>=c['threshold_paddle']:
+                ps,px,full_top=recovered
+                py_core=full_top+self.paddle_offset+self.paddle.shape[0]/2
+                self.paddle_method='red-band'
         paddle_top = py_core-self.paddle.shape[0]/2-self.paddle_offset
         py = paddle_top+self.paddle_full_shape[0]/2
         # The boot can be beside/below the red roof. Search the whole arena,
@@ -202,6 +216,8 @@ class Tracker:
             self.last_frame = None
         bs, bx, by, bw, bh = self.find_ball(playfield, now)
         valid = ps >= c['threshold_paddle'] and bs >= max(.67, c['threshold_ball'])
+        self.tracking_reason=('paddle-lost' if ps<c['threshold_paddle'] else
+                              'boot-lost' if bs<max(.67,c['threshold_ball']) else 'acquiring-velocity')
         vx = vy = 0
         ready = False
         if valid and self.previous:
@@ -211,9 +227,12 @@ class Tracker:
                 vx, vy = (bx-ox)/dt, (by-oy)/dt
                 valid = abs(vx) < frame.shape[1]*5 and abs(vy) < frame.shape[0]*5
                 ready = valid
+                self.tracking_reason='tracking' if valid else 'jump-rejected'
         target = intercept(bx, by, vx, vy, paddle_top-self.h/2,
                            self.w/2, frame.shape[1]-self.w/2)
         command = direction(target, px, c['deadzone']) if valid and ready else 0
+        self.last_target=target
+        self.last_command=command
         self.previous = (bx, by, now) if valid else None
         if valid:
             self.last_ball = (bx, by, now)

@@ -16,7 +16,7 @@ Quando aparece **“TRAVAR POSIÇÃO DO CARRINHO”**, reconhece a instrução e
 
 Tudo em uma interface para Windows, com um único executável. Sem instalar Python para jogar.
 
-**v1.0.1:** reconhecimento da instrução de relançamento mais tolerante a pequenas mudanças de calibração. Veja o [histórico de versões](CHANGELOG.md).
+**v1.0.2:** recuperação da raquete pela faixa vermelha e F10 sem interromper o controle. Veja o [histórico de versões](CHANGELOG.md).
 
 ## Baixar e usar
 
@@ -97,7 +97,7 @@ O resultado fica em `dist/Dota-Minigame-Auto-Calibrado.exe`. A receita inclui a 
 ## Verificações
 
 ```powershell
-.venv\Scripts\python.exe -m unittest -v test_calibration test_launch_prompt test_auto_launch test_tracking test_physics
+.venv\Scripts\python.exe -m unittest -v test_calibration test_launch_prompt test_auto_launch test_tracking test_tracking_recovery test_diagnostics test_physics
 ```
 
 Os testes cobrem previsão de rebotes, seleção de direção, calibração embutida, cenas reais de diagnóstico, perdas de detecção e o relançamento. O executável também foi aberto em um ambiente gráfico isolado, inclusive com um perfil sem calibração salva. O autor confirmou o funcionamento da versão usada como base em jogo.

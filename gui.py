@@ -21,6 +21,7 @@ from tracker import Tracker
 from auto_launch import double_space
 from launch_prompt import LaunchPrompt
 from calibration import load_calibration
+from diagnostics import DiagnosticWriter
 
 USER = ctypes.WinDLL('user32', use_last_error=True)
 USER.SetProcessDPIAware()
@@ -30,13 +31,17 @@ USER.GetAsyncKeyState.argtypes = [ctypes.c_int]
 USER.GetAsyncKeyState.restype = ctypes.c_short
 USER.keybd_event.argtypes = [wintypes.BYTE, wintypes.BYTE, wintypes.DWORD, ctypes.c_size_t]
 DATA = Path(os.environ.get('LOCALAPPDATA', str(Path.home()))) / 'DotaMinigameAssistente'
-APP_VERSION = '1.0.1'
+APP_VERSION = '1.0.2'
+
+
+def is_dota_title(title):
+    return title.strip().casefold()=='dota 2'
 
 
 def dota_focused():
     title = ctypes.create_unicode_buffer(512)
     USER.GetWindowTextW(USER.GetForegroundWindow(), title, 512)
-    return 'dota 2' in title.value.lower()
+    return is_dota_title(title.value)
 
 
 def snapshot_window(root, output):
@@ -85,6 +90,7 @@ class App:
         self.root = root
         self.stop = threading.Event()
         self.worker = None
+        self.diagnostic_writer=DiagnosticWriter()
         self.messages = queue.Queue(maxsize=2)
         self.config = None
         self.ball = self.paddle = None
@@ -335,6 +341,7 @@ class App:
             launcher = LaunchPrompt(Path(getattr(sys, '_MEIPASS', Path(__file__).parent))/'launch_ready.png')
             launch_trace = deque(maxlen=120)
             last_launch = None
+            last_prompt_scan=None
             paused, was_f8, was_f10, report = False, False, False, 0
             with mss.MSS() as capture:
                 while not self.stop.is_set():
@@ -346,11 +353,13 @@ class App:
                         paused = not paused
                         tracker.reset_motion()
                         launcher.reset_observation()
+                        last_prompt_scan=None
                     was_f8 = f8
                     if paused or not dota_focused():
                         move(0)
                         tracker.reset_motion()
                         launcher.reset_observation()
+                        last_prompt_scan=None
                         if now-report > .3:
                             self.post('Pausado (F8 retoma).' if paused else 'Aguardando você voltar ao Dota 2. Teclas soltas.')
                             report = now
@@ -358,13 +367,21 @@ class App:
                         continue
                     frame = np.asarray(capture.grab(self.config['arena']))[:, :, :3]
                     preview, command, valid, ball, paddle = tracker.step(frame, time.perf_counter())
-                    launch = launcher.update(time.perf_counter(), frame, paddle >= self.config['threshold_paddle'],
-                                             enabled=self.auto_launch_enabled and not observe)
+                    # The launch instruction need not be scanned 20+ times per
+                    # second during normal play. Visible prompts still update each frame.
+                    launch=False
+                    if launcher.visible or last_prompt_scan is None or now-last_prompt_scan>=.15:
+                        launch = launcher.update(time.perf_counter(), frame, paddle >= self.config['threshold_paddle'],
+                                                 enabled=self.auto_launch_enabled and not observe)
+                        last_prompt_scan=now
                     if launcher.visible and self.auto_launch_enabled and not observe:
                         command=0
                     launch_trace.append({'time':time.perf_counter(),'valid':bool(valid),'ball':tracker.ball_box,
                                          'paddle':tracker.paddle_box,'reason':launcher.reason,'request':launch,
-                                         'prompt_score':launcher.score,'prompt_visible':launcher.visible})
+                                         'prompt_score':launcher.score,'prompt_visible':launcher.visible,
+                                         'ball_score':ball,'paddle_score':paddle,'paddle_method':tracker.paddle_method,
+                                         'tracking_reason':tracker.tracking_reason,'command':command,
+                                         'target':tracker.last_target,'frame_ms':(time.perf_counter()-now)*1000})
                     if launch:
                         move(0)
                         def launch_allowed():
@@ -383,25 +400,24 @@ class App:
                         self.post('Instrução de lançamento: Espaço enviado duas vezes.' if sent else 'Relançamento interrompido; teclas soltas.', preview)
                     f10 = bool(USER.GetAsyncKeyState(0x79) & 0x8000)
                     if f10 and not was_f10:
-                        move(0)
-                        folder = DATA / 'diagnosticos' / time.strftime('%Y%m%d-%H%M%S')
-                        folder.mkdir(parents=True, exist_ok=True)
-                        for name, image in [('arena', frame), ('deteccao', preview), ('bola', self.ball), ('raquete', self.paddle)]:
-                            (folder/f'{name}.png').write_bytes(cv2.imencode('.png', image)[1].tobytes())
-                        (folder/'estado.json').write_text(json.dumps({'config': self.config, 'ball_score': ball,
+                        folder = DATA / 'diagnosticos' / (time.strftime('%Y%m%d-%H%M%S')+f'-{time.time_ns()%1000000000:09d}')
+                        state={'config': self.config, 'ball_score': ball,
                             'paddle_score': paddle, 'valid': valid, 'auto_launch_enabled':self.auto_launch_enabled,
                             'launch_reason':launcher.reason,'prompt_score':launcher.score,'prompt_visible':launcher.visible,
                             'app_version':APP_VERSION,'prompt_method':launcher.method,
-                            'last_launch':last_launch}, indent=2), encoding='utf-8')
-                        (folder/'relancamento.json').write_text(json.dumps(list(launch_trace),indent=2),encoding='utf-8')
-                        tracker.reset_motion()
-                        launcher.reset_observation()
-                        command = 0
-                        self.post(f'Diagnóstico salvo em {folder}', preview)
+                            'last_launch':last_launch,'paddle_method':tracker.paddle_method,
+                            'tracking_reason':tracker.tracking_reason,'command':command,'target':tracker.last_target}
+                        self.diagnostic_writer.submit(folder,{'arena':frame,'deteccao':preview,'bola':self.ball,'raquete':self.paddle},
+                                                      state,list(launch_trace),self.post)
                     was_f10 = f10
                     move(command)
                     if now-report > .12:
-                        state = 'Detectando' if valid else 'Perdeu o alvo — teclas soltas'
+                        state = ('Detectando • raquete recuperada pela faixa vermelha' if tracker.paddle_method=='red-band'
+                                 else 'Detectando') if valid else {
+                                     'paddle-lost':'Raquete não reconhecida — A/D soltos',
+                                     'boot-lost':'Bota não reconhecida — A/D soltos',
+                                     'jump-rejected':'Salto de detecção rejeitado — A/D soltos',
+                                 }.get(tracker.tracking_reason,'Aguardando detecção — A/D soltos')
                         if launcher.visible:state=launcher.reason
                         self.post(f'{state} • Bola {ball:.0%} • Raquete {paddle:.0%} • '
                                   + ('Observação' if observe else 'Controle A/D'), preview)
@@ -456,7 +472,7 @@ class App:
     def close(self):
         self.closing = True
         self.stop.set()
-        if self.worker and self.worker.is_alive():
+        if (self.worker and self.worker.is_alive()) or self.diagnostic_writer.busy():
             self.root.after(50, self.close)
             return
         self.root.destroy()
