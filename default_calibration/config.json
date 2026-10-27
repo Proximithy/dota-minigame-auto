@@ -1,0 +1,13 @@
+{
+  "arena": {
+    "left": 817,
+    "top": 190,
+    "width": 551,
+    "height": 725
+  },
+  "paddle_y": 602,
+  "paddle_band": 186,
+  "deadzone": 21.24,
+  "threshold_ball": 0.6,
+  "threshold_paddle": 0.7
+}
